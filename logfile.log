@@ -1,0 +1,40 @@
+[2024-08-13 19:26:42] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=1, matricula=122552, nombre='juana', apellido='cardona'}
+[2024-08-13 19:27:15] [ ERROR] [OdontologoDaoH2:29] Error de Sintaxis en sentencia SQL "\000d\000a\000d\000aCREATE TABLE ODONTOLOGOS\000d\000a(\000d\000a    ID INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    MATRICULA INT NOT NULL,\000d\000a    NOMBRE VARCHAR(25) NOT NULL,\000d\000a    APELLIDO VARCHAR(25) NOT NULL,\000d\000a[*])"; se esperaba "identifier"
+Syntax error in SQL statement "\000d\000a\000d\000aCREATE TABLE ODONTOLOGOS\000d\000a(\000d\000a    ID INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    MATRICULA INT NOT NULL,\000d\000a    NOMBRE VARCHAR(25) NOT NULL,\000d\000a    APELLIDO VARCHAR(25) NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+
+
+CREATE TABLE ODONTOLOGOS
+(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    MATRICULA INT NOT NULL,
+    NOMBRE VARCHAR(25) NOT NULL,
+    APELLIDO VARCHAR(25) NOT NULL,
+) [42001-230]
+[2024-08-13 19:29:18] [ ERROR] [OdontologoDaoH2:29] Conversión de datos fallida, convirtiendo "'a1' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'a1' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+
+
+INSERT INTO ODONTOLOGOS VALUES (DEFAULT, 'a1','Andrea', 'cordoba') [22018-230]
+[2024-08-13 19:30:01] [ ERROR] [OdontologoDaoH2:43] Conversión de datos fallida, convirtiendo "'A1' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'A1' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS VALUES (DEFAULT, ?,?,?) [22018-230]
+[2024-08-13 19:31:36] [ INFO ] [OdontologoDaoH2:32] Odontologo guardado exitosamente
+[2024-08-13 19:31:36] [ INFO ] [OdontologoDaoH2:40] Odontologo{Id=0, matricula=2, nombre='Alejandra', apellido='Osorio'}
+[2024-08-13 19:32:20] [ INFO ] [OdontologoDaoH2:32] Odontologo guardado exitosamente
+[2024-08-13 19:32:20] [ INFO ] [OdontologoDaoH2:40] Odontologo{Id=0, matricula=2, nombre='Alejandra', apellido='Osorio'}
+[2024-08-13 19:46:44] [ INFO ] [OdontologoDaoH2:32] Odontologo guardado exitosamente
+[2024-08-13 19:46:44] [ INFO ] [OdontologoDaoH2:39] Odontologo{Id=2, matricula=b1, nombre='Alejandra', apellido='Osorio'}
+[2024-08-13 19:49:47] [ INFO ] [OdontologoDaoH2:60] [Odontologo{Id=1, matricula=1, nombre='Andrea', apellido='cordoba'}]
+[2024-08-13 19:50:35] [ INFO ] [OdontologoDaoH2:60] [Odontologo{Id=1, matricula=1, nombre='Andrea', apellido='cordoba'}, Odontologo{Id=2, matricula=1, nombre='Diego', apellido='Torres'}]
+[2024-08-13 20:16:52] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=1, matricula=2g, nombre='Sofia', apellido='Lopera'}
+[2024-08-13 20:16:52] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=2, matricula=3g, nombre='Sofanor', apellido='Lopaz'}
+[2024-08-13 20:16:52] [ INFO ] [OdontologoDaoMemoria:28] Se encontraron 2 odontólogos
+[2024-08-13 20:19:17] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=1, matricula=122552, nombre='juana', apellido='cardona'}
+[2024-08-13 20:19:17] [ INFO ] [OdontologoServiceMemoriaTest:27] Odontologo{Id=1, matricula=122552, nombre='juana', apellido='cardona'}
+[2024-08-13 20:19:46] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=1, matricula=2g, nombre='Sofia', apellido='Lopera'}
+[2024-08-13 20:19:46] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=2, matricula=3g, nombre='Sofanor', apellido='Lopaz'}
+[2024-08-13 20:19:46] [ INFO ] [OdontologoDaoMemoria:28] Se encontraron 2 odontólogos
+[2024-08-13 20:20:12] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=1, matricula=2g, nombre='Sofia', apellido='Lopera'}
+[2024-08-13 20:20:12] [ INFO ] [OdontologoDaoMemoria:19] odontologo guardado Odontologo{Id=2, matricula=3g, nombre='Sofanor', apellido='Lopaz'}
+[2024-08-13 20:20:12] [ INFO ] [OdontologoDaoMemoria:28] Se encontraron 2 odontólogos
+[2024-08-13 20:20:12] [ INFO ] [OdontologoServiceMemoriaTest:42] [Odontologo{Id=1, matricula=2g, nombre='Sofia', apellido='Lopera'}, Odontologo{Id=2, matricula=3g, nombre='Sofanor', apellido='Lopaz'}]

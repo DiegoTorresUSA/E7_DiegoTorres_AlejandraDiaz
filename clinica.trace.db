@@ -1,0 +1,4 @@
+2024-08-13 19:30:01.659519-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'A1' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'A1' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS VALUES (DEFAULT, ?,?,?) [22018-230]

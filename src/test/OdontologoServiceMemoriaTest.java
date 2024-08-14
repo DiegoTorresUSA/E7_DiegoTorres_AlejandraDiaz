@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class OdontologoServiceMemoriaTest {
     static Logger logger = Logger.getLogger(OdontologoServiceMemoriaTest.class);
-    //private List<Odontologo> listaOdontologosMemoria = new ArrayList<>();
+    private List<Odontologo> listaOdontologosMemoria = new ArrayList<>();
     OdontologoService odontologoService = new OdontologoService(new OdontologoDaoMemoria());
 
     @Test
@@ -27,10 +27,19 @@ public class OdontologoServiceMemoriaTest {
         assertNotNull(odontologoDesdeMemoria.getId());
     }
 
-//    @Test
-//    public void testListarOdontologosEnMemoria() {
-//        List<Odontologo> odontologos = odontologoServiceEnMemoria.listarOdontologos();
+    @Test
+    @DisplayName("Testear que la lista de osontologos pueda ser obtenida")
+    void caso2(){
+        odontologoService.guardarOdontologo(new Odontologo(1, "2g", "Sofia", "Lopera"));
+        odontologoService.guardarOdontologo(new Odontologo(2, "3g", "Sofanor", "Lopaz"));
+//        List<Odontologo> odontologos = listaOdontologosMemoria.listarOdontologos(); //listaOdontologosMemoria
 //        assertEquals(2, odontologos.size());
-//    }
 
+        // Cuando
+        List<Odontologo> odontologos = odontologoService.listarOdontologo();
+
+        // Entonces
+        logger.info(odontologos);
+        assertEquals(2, odontologos.size());
+    }
 }
